@@ -26,8 +26,8 @@ public class commonSteps {
 		if(scenario.isFailed()) {
 			
 			TakesScreenshot ts=(TakesScreenshot)driver;
-			byte[]screenshot=ts.getScreenshotAs(OutputType.BYTES);
-			scenario.attach(screenshot, "image/png",scenario.getName());
+			byte[] screenshot=ts.getScreenshotAs(OutputType.BYTES);
+        	scenario.attach(screenshot, "image/png",scenario.getName());
 			}
 		
 		System.out.println("global after hook executed");

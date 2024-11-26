@@ -13,6 +13,7 @@ import io.cucumber.junit.Cucumber;
 		plugin= {"pretty","json:Reports/json.myReport/cucumber.json"},
 		dryRun=false, 
 		monochrome=true,
+		//dryRun = true,
 		tags= "@P1 and @P2"
 		
 )

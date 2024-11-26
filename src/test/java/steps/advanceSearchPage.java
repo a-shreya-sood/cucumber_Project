@@ -1,12 +1,11 @@
 package steps;
 
-import org.testng.Assert;
+//import org.testng.Assert;
 
 import Actionss.AdvanceHome_Action;
 import Actionss.CommonAction;
 
-import static org.testng.Assert.fail;
-
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

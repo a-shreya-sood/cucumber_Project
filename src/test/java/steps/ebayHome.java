@@ -2,7 +2,7 @@ package steps;
 
 import io.cucumber.java.en.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 import Actionss.CommonAction;
 import Actionss.ebayHomePage_Actions;
@@ -11,6 +11,7 @@ import static org.junit.Assert.fail;
 
 import java.util.List;
 
+import org.junit.Assert;
 import org.openqa.selenium.*;
 
 
@@ -48,7 +49,7 @@ public class ebayHome {
 		    String actualURL=comAction.currentPageUrl();
 		    if(!expURL.equals(actualURL))
 		    {
-		    	fail("Page is not same.");
+		    	Assert.fail("Page is not same.");
 		    }
 		    System.out.println("I am on advance search link");
 		}
@@ -91,7 +92,7 @@ public class ebayHome {
 		
 		if(textCount<=count)
 		{
-			fail("Less than 1000 results");
+			Assert.fail("Less than 1000 results");
 		}
 		}
 		
@@ -106,12 +107,12 @@ public void i_click_on(String string) {
 public void i_validate_the_and(String url, String title) {
 	String actUrl=comAction.currentPageUrl();
 	if(!actUrl.equals(url)) {
-		fail("Page not loading"+url);
+		Assert.fail("Page not loading"+url);
 	}
 	
 	String actTitle=comAction.currentTitle();
 	if(!actTitle.contains(title)) {
-		fail("Title not found"+title);
+		Assert.fail("Title not found"+title);
 	}
     
 }
